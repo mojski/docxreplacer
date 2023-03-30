@@ -31,8 +31,9 @@ namespace MM.DocumentCreator.Models.Documents
 
         [DisplayName("Dzielnica")]
         public string District { get; set; } = string.Empty;
-
-        [DisplayName("Adres (ulica, numer)")]
+        
+        
+        [DisplayName("Szkoła / Przedszkole")]
         public string StreetAndNumbers { get; set; } = string.Empty;
 
         [DisplayName("Klasa, grupa")]

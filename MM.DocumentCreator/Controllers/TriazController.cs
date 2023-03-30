@@ -27,7 +27,11 @@ namespace MM.DocumentCreator.Controllers
                 var stream = new MemoryStream();
                 doc.SaveAs(stream);
                 byte[] bytes = stream.ToArray();
-                Response.Headers.Add("content-disposition", $"attachment; filename=Nowe_Zgłoszenie_{triazDto.District}_{triazDto.Postal}_{triazDto.PatientName}_{DateTime.Now.ToString("dd_mm_yyyy")}.docx");
+                // zapisywanie do pliku - nazwa pliku imie nazwisko data  np. Maja Michalska 21 03 2023
+                // PatientName - imię i nazwisko
+                // CompletedAt - data
+
+                Response.Headers.Add("content-disposition", $"attachment; filename={triazDto.PatientName}_{DateTime.Now.ToString("dd_mm_yyyy")}.docx");
                 return File(bytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
             }
             catch (Exception e)
