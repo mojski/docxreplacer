@@ -31,7 +31,7 @@ namespace MM.DocumentCreator.Controllers
                 // PatientName - imię i nazwisko
                 // CompletedAt - data
 
-                Response.Headers.Add("content-disposition", $"attachment; filename={triazDto.PatientName}_{DateTime.Now.ToString("dd_mm_yyyy")}.docx");
+                Response.Headers.Add("content-disposition", $"attachment; filename={triazDto.PatientName}_{DateTime.Now.ToString("dd MM  yyyy")}.docx");
                 return File(bytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
             }
             catch (Exception e)
