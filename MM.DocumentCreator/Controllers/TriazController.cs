@@ -36,7 +36,7 @@ namespace MM.DocumentCreator.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);a
+                return BadRequest(e.Message);
             }
         }
 
