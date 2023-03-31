@@ -25,9 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="DocTemplates\triaz.docx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="DocTemplates\Triaz_vol2.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
